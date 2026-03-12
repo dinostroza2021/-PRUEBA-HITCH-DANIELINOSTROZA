@@ -40,17 +40,20 @@
                             <td class="text-center">{{ $payment->price }}</td>
                             <td class="text-center">
                                 <div class="btn-group">
+
+                                    <a href="{{ route('payments.show', $payment->id) }}" class="btn btn-sm btn-primary">Ver
+                                        <i class="fa fa-eye"></i></a>
                                     <a href="{{ route('payments.edit', $payment->id) }}"
-                                        class="btn btn-sm btn-warning">Editar <i class="fa fa-pencil"></i></a>
+                                        class="btn btn-sm btn-warning">Editar <i class=" fa fa-pencil"></i></a>
                                     <form id="form-delete-{{ $payment->id }}"
-                                        action="{{ route('payments.destroy', $payment->id) }}" method="POST"
+                                                action=" {{ route('payments.destroy', $payment->id) }}" method="POST"
                                         style="display:inline;" onsubmit="confirmDelete(event, {{ $payment->id }})">
 
                                         @csrf
                                         @method('DELETE')
 
                                         <button type="submit" class="btn btn-sm btn-danger">
-                                            Eliminar  <i class="fa fa-trash-o"></i>
+                                            Eliminar <i class="fa fa-trash-o"></i>
                                         </button>
 
                                     </form>
@@ -87,7 +90,7 @@
                 title: '¿Está seguro?',
                 text: "Este registro será eliminado",
                 icon: 'warning',
-                showCancelButton: true,              
+                showCancelButton: true,
                 cancelButtonText: 'Cancelar',
                 confirmButtonText: 'Sí, eliminar'
             }).then((result) => {
