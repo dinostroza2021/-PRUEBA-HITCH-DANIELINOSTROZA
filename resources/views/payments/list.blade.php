@@ -37,7 +37,7 @@
                         <tr>
                             <td class="text-center">{{ $payment->id }}</td>
                             <td class="text-center">{{ $payment->description }}</td>
-                            <td class="text-center">{{ $payment->price }}</td>
+                            <td class="text-center">${{ number_format($payment['price'], 0, ',', '.') }}</td>
                             <td class="text-center">
                                 <div class="btn-group">
 
