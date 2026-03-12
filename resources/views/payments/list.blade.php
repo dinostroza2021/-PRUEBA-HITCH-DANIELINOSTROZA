@@ -84,7 +84,7 @@
 
         function confirmDelete(event, id) {
 
-            event.preventDefault(); // evita que el form se envíe
+            event.preventDefault(); // Stop frente a la confirmación. 
 
             Swal.fire({
                 title: '¿Está seguro?',
